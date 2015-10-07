@@ -10,10 +10,18 @@
 
 .navbar.navbar-default.navbar-custom li a{
 	color:white;
+	text-decoration:none;
+}
+
+.navbar.navbar-default.navbar-custom li a:hover,
+.navbar.navbar-default.navbar-custom li a:focus{
+	color:white;
+	text-decoration:none;
 }
 
 .navbar.navbar-default.navbar-custom li{
 	color:white;
+	text-decoration:none;
 }
 
 .nav.navbar-nav{
@@ -22,6 +30,12 @@
 
 .navbar-default .navbar-brand{
 	color: white;
+	text-decoration:none;
+}
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover{
+  background-color: transparent;
+  color: white;
 }
 
 .navbar-default .navbar-toggle .icon-bar{
@@ -49,6 +63,40 @@
 	max-width: 1080px;
 }
 
+.footer{
+	background-color: #515E91;
+	color: white;
+	font-size: 25px;
+	text-align: center;
+	max-height: 200px;
+	padding: 5px 0 5px 0;
+}
+
+.footer a{
+	color: white;
+	text-decoration:none;
+}
+
+.footnotes{
+	background-color:grey;
+}
+
+.navbar.navbar-default.navbar-custom li a.active{
+	background-color: #7B85AD ;
+}
+
+.glyphicon.glyphicon-menu-right{
+
+}
+.open>.dropdown-menu {
+    display: block;
+    background-color: #515E91;
+}
+
+.open>.dropdown-menu li a:hover,
+.open>.dropdown-menu li a:focus {
+    background-color: #515E91;
+}
 
 @media only screen and (max-width : 768px) {
 
