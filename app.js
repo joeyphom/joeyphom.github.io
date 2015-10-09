@@ -3,7 +3,7 @@
 	app.directive('aboutPage',function(){
 		return{
 			restrict: 'E',
-			templateUrl: 'about-page.html'
+			templateUrl: '/views/about-page.html'
 		};
 	});
 })();
