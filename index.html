@@ -12,7 +12,7 @@
     	<link rel="stylesheet" type="text/css" href="styles.css" media = "screen">
     	<script type="text/javascript" src = "app.js"></script>
 	</head>
-	<body>
+	<body ng-controller ="ContentController as content">
 		<!-- Navigation Bar -->
 		<nav role ="navigation" class="navbar navbar-default navbar-custom">
 			<div class = "container-fluid">
@@ -27,9 +27,15 @@
 				</div>	
 				<div id = "navbarCollapse" class = "collapse navbar-collapse">
 					<ul class = "nav navbar-nav navbar-right">
-						<li><a class = "active" href = "#">ABOUT</a></li>
-						<li><a href = "#">PORTFOLIO</a></li>
-						<li data-toggle = "dropdown" class ="dropdown-toggle" id="dropdownMenu1"><a href = "#">CONTACT ME<span class="caret"></span></a></li>
+						<li ng-class="active:content.isSelected(about)">
+							<a class = "active" href = "#" ng-click = "content.selectTab(about)">ABOUT</a>
+						</li>
+						<li ng-class="active:content.isSelected(portfolio)">
+							<a href = "#" ng-click = "content.selectTab(portfolio)">PORTFOLIO</a>
+						</li>
+						<li data-toggle = "dropdown" class ="dropdown-toggle" id="dropdownMenu1" ng-class="active:content.isSelected(contact)">
+							<a href = "#" ng-click = "content.selectTab(contact)">CONTACT ME<span class="caret"></span></a>
+						</li>
 						<ul class = "dropdown-menu" aria-labelledby="dropdownmenu1">
 							<li><a href="#">EMAIL ME</a></li>
 							<li><a href="#">LINKEDIN</a></li>
@@ -40,9 +46,15 @@
 		</nav>
 		<!-- Main Body and start of Template-->
 		<div class="container-fluid">
-			<about-page></about-page>
-			<portfolio-page></portfolio-page>
-			<contact-page></contact-page>
+			<div class = "panel" ng-show="content.isSelected(about)">
+				<about-page></about-page>
+			</div>
+			<div class = "panel" ng-show="content.isSelected(portfolio)">
+				<portfolio-page></portfolio-page>
+			</div>
+			<div class = "panel" ng-show="content.isSelected(contact)">
+				<contact-page></contact-page>
+			</div>
 		</div>
 		<div class = "footer">
 			<!-- Footer that acts as a link to go to the next page-->

@@ -1,5 +1,15 @@
 (function(){
 	var app = angular.module('portfolioApp', []);
+	
+	app.controller('ContentController',function(){
+		this.tab = "about";
+		this.selectTab = function(tabName){
+			this.tab = tabName;
+		};
+		this.isSelected = function(tabName){
+			return this.tab === tabName;
+		}
+	});
 	app.directive('aboutPage',function(){
 		return{
 			restrict: 'E',
