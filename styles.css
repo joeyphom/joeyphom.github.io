@@ -78,7 +78,17 @@
 }
 
 .footnotes{
-	background-color:grey;
+	padding: 20px 0 20px 0;
+	background-color: #374e58;
+	color: white;
+}
+
+.footer-nav{
+	text-align:center;
+}
+
+.footer-profile img{
+	margin:auto;
 }
 
 .navbar.navbar-default.navbar-custom li a.active{
@@ -98,7 +108,16 @@
     background-color: #515E91;
 }
 
-@media only screen and (max-width : 768px) {
+#about-portrait{
+	border: 3px solid black;
+}
+
+#footer-portrait{
+	border: 3px solid black;
+
+}
+
+@media only screen and (max-width : 767px) {
 
 	.navbar.navbar-default.navbar-custom li{
 		color:white;
@@ -108,5 +127,27 @@
 	#navbarCollapse{
 		margin-top:25px;
 	}
+
+}
+
+@media(max-width:992px){
+	.footnotes > .container-fluid{
+		max-width: 612px;
+	}
+	.footer-profile img{
+		margin-bottom: 5px;
+	}
+}
+
+@media only screen and (min-width: 992px ){
+
+	.footer-profile img{
+		margin: auto 10px 0px auto;
+		float:left;
+	}	
+
+}
+
+@media(min-width:1200px){
 
 }
