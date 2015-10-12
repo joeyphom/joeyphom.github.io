@@ -27,25 +27,21 @@
 				</div>	
 				<div id = "navbarCollapse" class = "collapse navbar-collapse">
 					<ul class = "nav navbar-nav navbar-right">
-						<li ng-class="active:content.isSelected('about')">
-							<a class = "active" href = "#" ng-click = "content.selectTab('about')">ABOUT</a>
+						<li ng-class="{active:content.isSelected('about')}">
+							<a href = "#" ng-click = "content.selectTab('about')">ABOUT</a>
 						</li>
-						<li ng-class="active:content.isSelected('portfolio')">
+						<li ng-class="{active:content.isSelected('portfolio')}">
 							<a href = "#" ng-click = "content.selectTab('portfolio')">PORTFOLIO</a>
 						</li>
-						<li data-toggle = "dropdown" class ="dropdown-toggle" id="dropdownMenu1" ng-class="active:content.isSelected('contact')">
-							<a href = "#" ng-click = "content.selectTab('contact')">CONTACT ME<span class="caret"></span></a>
+						<li ng-class="{active:content.isSelected('contact')}">
+							<a href = "#" ng-click = "content.selectTab('contact')">CONTACT ME</a>
 						</li>
-						<ul class = "dropdown-menu" aria-labelledby="dropdownmenu1">
-							<li><a href="#">EMAIL ME</a></li>
-							<li><a href="#">LINKEDIN</a></li>
-						</ul>
 					</ul>
 				</div>
 			</div>
 		</nav>
 		<!-- Main Body and start of Template-->
-		<div class="container-fluid">
+		<div class="container-fluid body-content">
 			<div class = "panel" ng-show="content.isSelected('about')">
 				<about-page></about-page>
 			</div>
