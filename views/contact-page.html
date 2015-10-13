@@ -1,7 +1,8 @@
-<h1>
+
+<h1 id ="contact-h1">
 CONTACT
 </h1>
-<form id="contact-form" class = "contact-form" method = "post" data-success="Message Successfully Sent!">
+<form id="contact-form" class = "contact-form" role = "form" method = "post" data-success="Message Successfully Sent!">
 	<div class="form-group">
 		<label for="name">Name</label>
 		<input type = "text" class="form-control field" id="name" placeholder="Name" required>
@@ -16,9 +17,10 @@ CONTACT
 	</div>
 	<div class="form-group">
 		<label for="message"></label>
-		<textarea class="form-control field" name = "message" rows = "8" id="exampleInputMessage1" placeholder="Message" required></textarea>
+		<textarea class="form-control field" name = "message" rows = "8" id="message" placeholder="Message" required></textarea>
 	</div>
 	<!-- reCaptcha -->
   	<div class="g-recaptcha" data-sitekey="6Lfiug4TAAAAABkRBC3a5ya2bDyImGqUOuI8wVCq"></div>
-  	<button type="submit button" class="btn btn-default btn-lg">SUBMIT</button>
+  	<button type="submit button" value = "Send" class="submit btn btn-default btn-lg">SUBMIT</button>
 </form>
+<script type="text/javascript">setupRecaptcha();alert("test");</script>

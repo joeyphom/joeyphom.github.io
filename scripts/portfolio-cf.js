@@ -9,6 +9,8 @@ function setupRecaptcha() {
   var contactFormHost = 'http://portfolio-cf.herokuapp.com/',
       form = $('#contact-form'),
       notice = form.find('#notice');
+      
+      alert("test");
 
   if (form.length) {
     showRecaptcha('recaptcha_widget');
