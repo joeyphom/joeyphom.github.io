@@ -36,6 +36,7 @@
 				      form = $(elem).children("form"),
 				      notice = form.find('#notice');
 
+				  alert(form.serialize());
 				  if (form.length) {
 				    form.submit(function(ev){
 				      ev.preventDefault();
