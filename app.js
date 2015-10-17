@@ -43,7 +43,6 @@
 				        type: 'POST',
 				        url: contactFormHost + 'send_email',
 				        data: form.serialize(),
-				        dataType: 'json',
 				        success: function(response) {
 				          switch (response.message) {
 				            case 'success':
@@ -59,7 +58,7 @@
 				          }
 				        },
 				        error: function(xhr, ajaxOptions, thrownError) {
-				          alert("Error");
+				          alert(thrownError);
 				        }
 				      });
 				    });
