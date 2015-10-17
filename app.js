@@ -29,9 +29,10 @@
 			restrict: 'E',
 			templateUrl: '/views/contact-page.html',
 			link: function(scope, elem, attrs){
+
 				elem.ready(function(){
 				
-				  var contactFormHost = 'http://portfolio-cf.herokuapp.com/',
+				  var contactFormHost = 'https://portfolio-mailer.herokuapp.com/',
 				      form = $(elem).children("form"),
 				      notice = form.find('#notice');
 
@@ -52,17 +53,13 @@
 				              });
 				              break;
 
-				            case 'failure_captcha':
-				              showRecaptcha('recaptcha_widget');
-				              notice.text(notice.data('captcha-failed')).fadeIn();
-				              break;
-
-				            case 'failure_email':
-				              notice.text(notice.data('error')).fadeIn();
+				            case 'failure_email' :{
+				            	alert("email failed");
+				            }
 				          }
 				        },
 				        error: function(xhr, ajaxOptions, thrownError) {
-				          notice.text(notice.data('error')).fadeIn();
+				          alert("Error");
 				        }
 				      });
 				    });
