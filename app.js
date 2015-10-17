@@ -44,19 +44,9 @@
 				        type: 'POST',
 				        url: contactFormHost + 'send_email',
 				        data: form.serialize(),
+				        data-type: json,
 				        success: function(response) {
-				          switch (response.message) {
-				            case 'success':
-				            	alert("success");
-				              form.fadeOut(function() {
-				                form.html('<h4>' + form.data('success') + '</h4>').fadeIn();
-				              });
-				              break;
-
-				            case 'failure_email' :{
-				            	alert("email failed");
-				            }
-				          }
+				        	alert(response);
 				        },
 				        error: function(xhr, ajaxOptions, thrownError) {
 				          alert(thrownError);
