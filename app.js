@@ -44,7 +44,7 @@
 				        type: 'POST',
 				        url: contactFormHost + 'send_email',
 				        data: form.serialize(),
-				        data-type: json,
+				        dataType: json,
 				        success: function(response) {
 				        	alert(response);
 				        },
