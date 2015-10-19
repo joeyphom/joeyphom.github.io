@@ -1,6 +1,7 @@
+
+
 (function(){
 	var app = angular.module('portfolioApp', []);
-
 	app.controller('ContentController',function(){
 		this.tab = "about";
 		this.selectTab = function(tabName){
@@ -32,11 +33,9 @@
 
 				elem.ready(function(){
 				
-				  var contactFormHost = 'https://portfolio-mailer.herokuapp.com/',
+				  var contactFormHost = 'http://localhost:3000/',
 				      form = $(elem).children("form"),
 				      notice = form.find('#notice');
-
-				  alert(form.serialize());
 				  if (form.length) {
 				    form.submit(function(ev){
 				      ev.preventDefault();
@@ -44,9 +43,13 @@
 				        type: 'POST',
 				        url: contactFormHost + 'send_email',
 				        data: form.serialize(),
-				        dataType: json,
+				        beforeSend: function(){
+				        },
 				        success: function(response) {
-				        	alert(response);
+				        	if( response === "Recaptcha Failed."){
+				        		alert(JSON.stringify(response));
+				        	}
+				        	grecaptcha.reset();
 				        },
 				        error: function(xhr, ajaxOptions, thrownError) {
 				          alert(thrownError);
