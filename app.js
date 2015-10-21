@@ -32,7 +32,9 @@
 			templateUrl: '/views/contact-page.html',
 			link: function(scope, elem, attrs){
 				var submitBtn = $(elem).children("form").find("#sendBtn");
-				var loadingBtn = $(elem).children("form").find("#sendingBtn")
+				var loadingBtn = $(elem).children("form").find("#sendingBtn");
+				$.getScript("https://www.google.com/recaptcha/api.js");
+
 				var submitBtnTrans = function(currentState){
 					if(currentState === "Send"){
 						submitBtn.hide();

@@ -46,4 +46,19 @@ CONTACT
 	   
 	   <strong>Failure!</strong> Your Email was not successfully sent. There was an issue with the reCaptcha verification. Please fill out the reCaptcha and try to send again.
 	</div>
+
+
+	    <script type='text/javascript'>
+	    var captchaContainer = null;
+	    alert("HELP");
+	    var loadCaptcha = function() {
+	      captchaContainer = grecaptcha.render('recaptcha', {
+	        'sitekey' : '6LdzHQ8TAAAAAHmXxdj08S4kZK-EGr9-sEvIqfsL',
+	        'callback' : function(response) {
+	          console.log(response);
+	        }
+	      });
+	    };
+	    </script>
+      <script src="https://www.google.com/recaptcha/api.js?onload=loadCaptcha&render=explicit" async defer></script>
 </form>
