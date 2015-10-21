@@ -5,7 +5,7 @@ CONTACT
 <form id="contact-form" class = "contact-form" role = "form" method = "post" data-success="Message Successfully Sent!">
 
     <script type="text/javascript">
-        grecaptcha.render('.g-recaptcha', {
+        grecaptcha.render('recaptcha', {
           'sitekey' : '6LdzHQ8TAAAAAHmXxdj08S4kZK-EGr9-sEvIqfsL'
         });
     </script>
@@ -27,7 +27,7 @@ CONTACT
 		<textarea class="form-control field" name = "message" rows = "8" id="message" placeholder="Message" required></textarea>
 	</div>
 	<!-- reCaptcha -->
-  	<div class="g-recaptcha" data-sitekey="6LdzHQ8TAAAAAHmXxdj08S4kZK-EGr9-sEvIqfsL"></div>
+  	<div id = "recaptcha"class="g-recaptcha" data-sitekey="6LdzHQ8TAAAAAHmXxdj08S4kZK-EGr9-sEvIqfsL"></div>
 
 
   	<button type="submit button" value = "Send" class="submit btn btn-default btn-lg" id = "sendBtn">SEND</Wbutton>
