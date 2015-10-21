@@ -2,6 +2,7 @@
 
 (function(){
 	var app = angular.module('portfolioApp', []);
+
 	app.controller('ContentController',function(){
 		this.tab = "about";
 		this.selectTab = function(tabName){
@@ -30,10 +31,21 @@
 			restrict: 'E',
 			templateUrl: '/views/contact-page.html',
 			link: function(scope, elem, attrs){
-
+				var submitBtn = $(elem).children("form").find("#sendBtn");
+				var loadingBtn = $(elem).children("form").find("#sendingBtn")
+				var submitBtnTrans = function(currentState){
+					if(currentState === "Send"){
+						submitBtn.hide();
+						loadingBtn.show();
+					}
+					else if(currentState === "Sending"){
+						loadingBtn.hide();
+						submitBtn.show();
+					}
+				};
 				elem.ready(function(){
 				
-				  var contactFormHost = 'http://localhost:3000/',
+				  var contactFormHost = 'https://portfolio-mailer.herokuapp.com/',
 				      form = $(elem).children("form"),
 				      notice = form.find('#notice');
 				  if (form.length) {
@@ -44,11 +56,18 @@
 				        url: contactFormHost + 'send_email',
 				        data: form.serialize(),
 				        beforeSend: function(){
+				        	$(".alert").fadeOut();
+				        	submitBtnTrans("Send");
 				        },
 				        success: function(response) {
 				        	if( response === "Recaptcha Failed."){
-				        		alert(JSON.stringify(response));
+				        		$(".alert.alert-danger").fadeIn();
 				        	}
+				        	else{
+				        		$(".alert.alert-success").fadeIn();
+				        	}
+				        	//notice.text("Message Successfully Sent").fadeIn();
+				        	submitBtnTrans("Sending");
 				        	grecaptcha.reset();
 				        },
 				        error: function(xhr, ajaxOptions, thrownError) {

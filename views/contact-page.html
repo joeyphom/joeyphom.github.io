@@ -21,6 +21,23 @@ CONTACT
 	</div>
 	<!-- reCaptcha -->
   	<div class="g-recaptcha" data-sitekey="6LdzHQ8TAAAAAHmXxdj08S4kZK-EGr9-sEvIqfsL" required></div>
-  	<button type="submit button" value = "Send" class="submit btn btn-default btn-lg">SUBMIT</button>
+
+  	<div id="notice" class="notice" data-captcha-failed="Incorrect captcha!" data-error="There was an error sending the message, please try again."></div>
+
+  	<button type="submit button" value = "Send" class="submit btn btn-default btn-lg" id = "sendBtn">SEND</Wbutton>
+	<button class="btn btn-lg btn-warning" id = "sendingBtn"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Sending...</button>
+	<div class = "alert alert-success">
+	   <a href = "#" class = "close" data-dismiss = "alert">
+	      &times;
+	   </a>
+	   
+	   <strong>Success!!</strong> Your Email was successfully sent!.
+	</div>
+	<div class = "alert alert-danger">
+	   <a href = "#" class = "close" data-dismiss = "alert">
+	      &times;
+	   </a>
+	   
+	   <strong>Failure!</strong> Your Email was not successfully sent! There was an issue with the reCaptcha verification. Please fill out the reCaptcha and try to send again.
+	</div>
 </form>
-<script type="text/javascript">setupRecaptcha();alert("test");</script>
