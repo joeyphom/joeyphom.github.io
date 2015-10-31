@@ -1,10 +1,10 @@
 .navbar.navbar-default.navbar-custom{
-	background-color: #515E91;
+	background-color: #38435B;
 	margin: 0;
-	border-color: #515E91;
+	border-color: #38435B;
 	border-radius: 0;
 	color: #ffffff;
-	padding: 10px 0 20px 0;
+	padding: 0px 0 10px 0;
 }
 
 
@@ -20,6 +20,28 @@
 .glyphicon-refresh-animate {
     -animation: spin .7s infinite linear;
     -webkit-animation: spin2 .7s infinite linear;
+}
+.welcome{
+	position:relative;
+	background-color: #4F5B74;
+	width: 100% !important;
+	min-height: 360px;	
+}
+
+.welcome-body{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align:center;
+  color:white;
+  vertical-align:middle;
+}
+.welcome:before{
+	content: '';
+	display: inline-block;
+	vertical-align:middle;
+	height: 100%;
 }
 
 button.submit.btn {
@@ -84,11 +106,41 @@ button#sendingBtn{
 }
 
 .container-fluid.body-content{
-	max-width: 720px;
+	max-width: 900px;
+}
+
+.img-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.portfolio-cell:before{
+	content: '';
+	display: inline-block;
+	vertical-align:middle;
+	height: 100%;
+}
+.portfolio-cell-image .img-responsive{
+	margin:0 auto !important;
+}
+.portfolio-cell{
+	position:relative;
+	min-height:186px;
+	font-size: 0;
+
+}
+
+.portfolio-cell-image{
+
+}
+
+.portfolio-row{
+	min-height:186px;
 }
 
 .footer{
-	background-color: #515E91;
+	background-color: #4F5B74;
 	color: white;
 	font-size: 25px;
 	text-align: center;
@@ -156,12 +208,18 @@ button#sendingBtn{
    margin-top: -150px;
 }
 
+#contact-form{
+	margin-top:40px;
+}
 
 
 button,
 input,
 textarea{
 	border-radius: 0 !important;
+}
+.about-profile{
+	margin-top:40px;
 }
 .about-content{
 	margin-top:5px;
@@ -180,6 +238,9 @@ textarea{
 	#navbarCollapse{
 		margin-top:25px;
 	}
+	.nav.navbar-nav {
+    	margin-top: 0px;
+	}	
 
 }
 

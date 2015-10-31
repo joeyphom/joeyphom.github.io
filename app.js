@@ -5,12 +5,28 @@
 
 	app.controller('ContentController',function(){
 		this.tab = "about";
+		this.tabWelcome = "WELCOME";
+		this.tabSubtext = ""
 		this.selectTab = function(tabName){
 			this.tab = tabName;
+			switch (this.tab){
+				case "about":
+					this.tabWelcome = "WELCOME";
+					this.tabSubtext = ""
+					break;
+				case "contact":
+					this.tabWelcome = "CONTACT ME";
+					this.tabSubtext = ""
+					break;
+				case "portfolio":
+					this.tabWelcome = "MY PORTFOLIO";
+					this.tabSubtext = "View a sample of my projects"
+					break;
+			}
 		};
 		this.isSelected = function(tabName){
 			return this.tab === tabName;
-		}
+		};
 	});
 	app.directive('aboutPage',function(){
 		return{
