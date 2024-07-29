@@ -1,0 +1,16 @@
+button.nierButton {
+  display: block;
+  background-color: var(--nier-med-gray);
+  font-size: 2.4rem;
+  color: var(--nier-dark-gray);
+  width: 500px;
+  text-align: left;
+  border: none;
+  padding: 10px;
+  -webkit-background-size: 0.5rem 0.5rem;
+  -moz-background-size: 0.5rem 0.5rem;
+  background-size: 0.5rem 0.5rem;
+  background-image: linear-gradient(to right, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px), linear-gradient(to bottom, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px);
+}
+
+/*# sourceMappingURL=NierButton.module.css.map */

@@ -1,3 +1,45 @@
-#root {
-  padding: 2rem;
+@import '_variables.css';
+html {
+  font-size: 62.5%;
 }
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  height: calc(100vh - 90px);
+  background-color: #d1cdb7;
+  -webkit-background-size: 0.5rem 0.5rem;
+  -moz-background-size: 0.5rem 0.5rem;
+  background-size: 0.5rem 0.5rem;
+  background-image: linear-gradient(to right, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px), linear-gradient(to bottom, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px);
+  font-family: helvetica, sans-serif;
+  color: var(--nier-dark-gray);
+  border-top: 3px solid var(--nier-dark-gray);
+  border-bottom: 3px solid var(--nier-dark-gray);
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 50px;
+}
+
+/*# sourceMappingURL=App.css.map */
