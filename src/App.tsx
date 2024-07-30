@@ -6,6 +6,7 @@ import MenuTabs from "./components/MenuTabs/MenuTabs.tsx";
 function App() {
   return (
       <>
+            <title>Joey Portfolio | Main Menu</title>
             <MenuHeader />
             <MenuTabs />
             <BoxDescription/>
