@@ -1,9 +1,9 @@
 import NierButton from "../NierButton/NierButton.tsx";
-import './MenuTab.module.css';
+import styles from './MenuTabs.module.css';
 
-const MenuHeader = () => {
+const MenuTabs = () => {
     return (
-        <nav>
+        <nav className={styles.menuTabs}>
             <ul>
                 <li>
                     <NierButton text={"Start Demo"}/>
@@ -22,4 +22,4 @@ const MenuHeader = () => {
     )
 }
 
-export default MenuHeader
+export default MenuTabs

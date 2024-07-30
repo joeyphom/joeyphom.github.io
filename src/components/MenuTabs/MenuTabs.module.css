@@ -1,15 +1,15 @@
-nav {
+.menuTabs {
   border-left: 15px solid var(--nier-med-gray);
 }
-nav ul {
+.menuTabs ul {
   display: flex;
   flex-direction: column;
   margin: 0 0 0 5px;
   gap: 20px;
   border-left: 2px solid var(--nier-med-gray);
 }
-nav ul li {
+.menuTabs ul li {
   list-style: none;
 }
 
-/*# sourceMappingURL=MenuTab.module.css.map */
+/*# sourceMappingURL=MenuTabs.module.css.map */

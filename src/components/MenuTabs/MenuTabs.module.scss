@@ -1,13 +1,16 @@
-nav{
+.menuTabs {
   border-left: 15px solid var(--nier-med-gray);
-  ul{
+
+  ul {
     display: flex;
     flex-direction: column;
     margin: 0 0 0 5px;
-    gap:20px;
+    gap: 20px;
     border-left: 2px solid var(--nier-med-gray);
-    li{
-      list-style:none;
+
+    li {
+      list-style: none;
     }
   }
 }
+

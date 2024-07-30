@@ -1,13 +1,13 @@
 import './App.css'
 import MenuHeader from "./components/MenuHeader/MenuHeader.tsx";
 import BoxDescription from "./components/BoxDescription/BoxDescription.tsx";
-import MenuTab from "./components/MenuTab/MenuTab.tsx";
+import MenuTabs from "./components/MenuTabs/MenuTabs.tsx";
 
 function App() {
   return (
       <>
             <MenuHeader />
-            <MenuTab/>
+            <MenuTabs />
             <BoxDescription/>
       </>
   )
