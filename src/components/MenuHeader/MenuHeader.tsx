@@ -1,7 +1,7 @@
-import './MenuHeader.module.css';
+import style from './MenuHeader.module.css';
 const MenuHeader = () => {
     return (
-        <header>
+        <header className={style.menuHeader}>
             <h1>Joey Phommasone Portfolio</h1>
         </header>
     )
