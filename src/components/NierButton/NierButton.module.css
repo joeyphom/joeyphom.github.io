@@ -13,4 +13,17 @@ button.nierButton {
   background-image: linear-gradient(to right, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px), linear-gradient(to bottom, #ccc8b1 1px, rgba(204, 200, 177, 0) 1px);
 }
 
+@media only screen and (min-width: 480px) {
+  /* Your styles here */
+}
+@media only screen and (min-width: 768px) {
+  /* Your styles here */
+}
+@media only screen and (min-width: 1024px) {
+  /* Your styles here */
+}
+@media only screen and (min-width: 1280px) {
+  /* Your styles here */
+}
+
 /*# sourceMappingURL=NierButton.module.css.map */
